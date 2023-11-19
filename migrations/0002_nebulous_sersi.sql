@@ -1,0 +1,1 @@
+ALTER TABLE "workspaces" RENAME COLUMN "workspace_ownser" TO "workspace_owner";

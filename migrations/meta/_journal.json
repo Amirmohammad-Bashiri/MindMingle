@@ -5,15 +5,22 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1700379098456,
-      "tag": "0000_minor_grandmaster",
+      "when": 1700389410352,
+      "tag": "0000_gifted_harrier",
       "breakpoints": true
     },
     {
       "idx": 1,
       "version": "5",
-      "when": 1700380245750,
-      "tag": "0001_numerous_skaar",
+      "when": 1700389898269,
+      "tag": "0001_stale_thaddeus_ross",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1700389984334,
+      "tag": "0002_nebulous_sersi",
       "breakpoints": true
     }
   ]

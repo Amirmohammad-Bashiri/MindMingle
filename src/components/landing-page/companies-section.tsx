@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { randomUUID } from "crypto";
 
 import { CLIENTS } from "@/lib/constants";
 
@@ -32,8 +33,8 @@ function CompaniesSection() {
       before:z-10
       before:absolute
     ">
-        {[...Array(2)].map(arr => (
-          <div key={arr} className="flex flex-nowrap animate-slide">
+        {[...Array(2)].map(_ => (
+          <div key={randomUUID()} className="flex flex-nowrap animate-slide">
             {CLIENTS.map(client => (
               <div
                 key={client.alt}

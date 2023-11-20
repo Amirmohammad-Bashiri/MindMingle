@@ -37,7 +37,7 @@ function CompaniesSection() {
             {CLIENTS.map(client => (
               <div
                 key={client.alt}
-                className="relative w-[200px] m-20 shrink-0 flex items-center">
+                className="relative w-[120px] md:w-[200px] m-20 shrink-0 flex items-center">
                 <Image
                   src={client.logo}
                   alt={client.alt}

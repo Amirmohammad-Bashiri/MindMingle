@@ -6,7 +6,7 @@ import CalBanner from "../../../public/cal.png";
 
 function FeaturesSection() {
   return (
-    <section className="px-4 sm:px-6 flex justify-center items-center flex-col relative">
+    <section className="px-4 py-10 sm:px-6 flex justify-center items-center flex-col relative">
       <div className="w-[30%] blur-[120px] rounded-full h-32 absolute bg-brand-primaryPurple/50 -z-10 top-22" />
       <TitleSection
         title="Keep track of your meetings all in one place"

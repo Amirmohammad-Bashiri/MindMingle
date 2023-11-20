@@ -15,6 +15,7 @@ function PlansSection() {
     <section
       className="mt-20
     px-4
+    py-10
     sm:px-6
   ">
       <TitleSection

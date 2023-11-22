@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as z from "zod";
@@ -15,16 +16,17 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { LoginFormSchema } from "@/lib/types";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Loader from "@/components/globals/loader";
+import { actionLoginUser } from "@/lib/server-actions/auth-actions";
+import { LoginFormSchema } from "@/lib/types";
 
 import Logo from "../../../public/logo.png";
 
 function LoginForm() {
   const [submitError, setSubmitError] = useState("");
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof LoginFormSchema>>({
     mode: "onChange",
@@ -36,7 +38,15 @@ function LoginForm() {
 
   const onSubmit: SubmitHandler<
     z.infer<typeof LoginFormSchema>
-  > = async formData => {};
+  > = async formData => {
+    const { error } = await actionLoginUser(formData);
+    if (error) {
+      form.reset();
+      setSubmitError(error.message);
+    }
+
+    router.replace("/dashboard");
+  };
 
   return (
     <Form {...form}>
